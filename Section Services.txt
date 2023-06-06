@@ -1,0 +1,101 @@
+        <section class="service section padd-15" id="services">
+          <div class="container">
+            <div class="row">
+              <div class="section_title">
+                <h2>Services</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="Service_all">
+                <div class="service_1">
+                  <!-- Start Service item -->
+                  <div class="service_item">
+                    <div class="service_item_inner">
+                      <div class="icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <h4>Web Developer</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quis vitae consequuntur ducimus?
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end Service item -->
+                  <!-- Start Service item -->
+                  <div class="service_item">
+                    <div class="service_item_inner">
+                      <div class="icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                      </div>
+                      <h4>Web Developer</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quis vitae consequuntur ducimus?
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end Service item -->
+                  <!-- Start Service item -->
+                  <div class="service_item">
+                    <div class="service_item_inner">
+                      <div class="icon">
+                        <i class="fa-solid fa-palette"></i>
+                      </div>
+                      <h4>Web Developer</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quis vitae consequuntur ducimus?
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end Service item -->
+                </div>
+                <div class="service_1">
+                  <!-- Start Service item -->
+                  <div class="service_item">
+                    <div class="service_item_inner">
+                      <div class="icon">
+                        <i class="fa-solid fa-code"></i>
+                      </div>
+                      <h4>Web Developer</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quis vitae consequuntur ducimus?
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end Service item -->
+                  <!-- Start Service item -->
+                  <div class="service_item">
+                    <div class="service_item_inner">
+                      <div class="icon">
+                        <i class="fa-brands fa-searchengin"></i>
+                      </div>
+                      <h4>Web Developer</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quis vitae consequuntur ducimus?
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end Service item -->
+                  <!-- Start Service item -->
+                  <div class="service_item">
+                    <div class="service_item_inner">
+                      <div class="icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                      </div>
+                      <h4>Web Developer</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quis vitae consequuntur ducimus?
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end Service item -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
