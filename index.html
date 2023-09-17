@@ -707,13 +707,14 @@
             <h4 class="contact_sub_title">I'M VERY RESPOSIVE TO MESSAGES</h4>
             <!-- contact form -->
             <div class="row">
-              <form action="" onsubmit="sendEmail(); reset(); return false;">
+              <form id="contactform" action="https://formsubmit.io/send/gemyisking@gmail.com" method="POST">
                 <div class="contact_form">
                   <div class="row roww">
                     <div class="form_item col-6">
                       <div class="form_group">
                         <input
                           type="text"
+                          name="name"
                           class="form_control"
                           placeholder="name"
                           id="name"
@@ -725,6 +726,7 @@
                       <div class="form_group">
                         <input
                           type="email"
+                          name="email"
                           class="form_control"
                           placeholder="Email"
                           id="email"
@@ -737,7 +739,8 @@
                     <div class="form_item col-12">
                       <div class="form_group">
                         <input
-                          type="text"
+                          type="number"
+                          name="Phone"
                           class="form_control"
                           placeholder="Phone"
                           id="Phone"
@@ -750,11 +753,11 @@
                     <div class="form_item col-12">
                       <div class="form_group">
                         <textarea
-                          name=""
+                          name="Message"
                           class="form_control"
                           id=""
                           placeholder="Message"
-                          id="message"
+                          id="Message"
                           required
                         ></textarea>
                       </div>
@@ -762,6 +765,7 @@
                   </div>
                   <div class="row">
                     <div class="form_item col-12">
+                      <input name="_formsubmit_id" type="text" style="display:none">
                       <button type="submit" class="btn">Send Message</button>
                     </div>
                   </div>
@@ -769,28 +773,6 @@
               </form>
             </div>
           </div>
-          <!-- <form onsubmit="sendEmail(); reset(); return false"  >
-            <input
-            type="text"
-            placeholder="your name"
-            id="name"
-            required
-          />
-            <input
-            type="email"
-            placeholder="email id"
-            id="email"
-            required
-            />
-            <input
-            type="text"
-            placeholder="phone no"
-            id="phone"
-            required
-            />
-            <textarea  id="message" placeholder="Leave your message"></textarea>
-            <button  type="submit" id="submit">send</button>
-          </form> -->
         </section>
         <!-- end section Contact -->
       </div>
