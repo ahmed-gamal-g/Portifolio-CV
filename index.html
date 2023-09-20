@@ -51,6 +51,14 @@
     />
 
     <title>Document</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("M3pi8YO21tiJNEFwo");
+})();
+</script>
   </head>
   <body>
     <!-- main Container start -->
@@ -707,7 +715,7 @@
             <h4 class="contact_sub_title">I'M VERY RESPOSIVE TO MESSAGES</h4>
             <!-- contact form -->
             <div class="row">
-              <form id="contactform" action="https://formsubmit.io/send/gemyisking@gmail.com" method="POST">
+              <!-- <form action="https://formsubmit.co/gemyisking@gmail.com" method="POST"> -->
                 <div class="contact_form">
                   <div class="row roww">
                     <div class="form_item col-6">
@@ -753,11 +761,10 @@
                     <div class="form_item col-12">
                       <div class="form_group">
                         <textarea
-                          name="Message"
+                          name="message"
                           class="form_control"
-                          id=""
-                          placeholder="Message"
-                          id="Message"
+                          placeholder="message"
+                          id="message"
                           required
                         ></textarea>
                       </div>
@@ -765,12 +772,24 @@
                   </div>
                   <div class="row">
                     <div class="form_item col-12">
-                      <input name="_formsubmit_id" type="text" style="display:none">
-                      <button type="submit" class="btn">Send Message</button>
+                      <button class="btn" onclick="sendMail()">Send Message</button>
                     </div>
                   </div>
                 </div>
-              </form>
+              <!-- </form> -->
+              <!-- <div class="form-group">
+                <h5>name</h5>
+                <input class="form-control" id="name" placeholder="enter your name" type="text">
+              </div>
+              <div class="form-group">
+                <h5>email</h5>
+                <input class="form-control" id="email" placeholder="enter your email" type="email">
+              </div>
+              <div class="form-group">
+                <h5>Message</h5>
+                <textarea name="" id="message" class="form-control"></textarea>
+              </div>
+              <button class="btn btn-primary"onclick="sendMail()">submit</button> -->
             </div>
           </div>
         </section>

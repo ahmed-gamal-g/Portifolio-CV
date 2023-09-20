@@ -10,3 +10,26 @@
 //       + "<br> message: " + document.getElementById('message').value
 //     }).then((message) => alert("message"));
 //   }
+
+function sendMail() {
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      email: document.getElementById("Phone").value,
+      message: document.getElementById("message").value,
+    };
+    const serviceID = "service_kp65nlh";
+    const templateID = "template_w9ld69m";
+    
+    emailjs
+      .send(serviceID, templateID, params)
+      .then((res) => {
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("Phone").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("your message sent successfully");
+      })
+      .catch((err) => console.log(err));
+  }
