@@ -15,7 +15,7 @@ function sendMail() {
     var params = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
-      email: document.getElementById("Phone").value,
+      Phone: document.getElementById("Phone").value,
       message: document.getElementById("message").value,
     };
     const serviceID = "service_kp65nlh";
