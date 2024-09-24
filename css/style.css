@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-:root {
+body.dark {
   --bg-black-900: #f2f2fc;
   --bg-black-100: #fdf9ff;
   --bg-black-50: #e8dfec;
@@ -8,7 +8,7 @@
   --text-black-700: #504e70;
 }
 
-body.dark {
+:root {
   --bg-black-900: #151515;
   --bg-black-100: #222222;
   --bg-black-50: #393939;
@@ -332,7 +332,7 @@ a {
 .btn {
   background: var(--skin-color);
   padding: 8px 12px;
-  color: var(--bg-black-100);
+  color: #fff;
   border-radius: 20px;
   min-width: 110px;
   text-align: center;
@@ -746,7 +746,7 @@ a {
 
 .portfolio .portfolio_item_inner .portfolio_img img {
   width: 100%;
-  min-height: 200px;
+  min-height: 215px;
   display: block;
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 3px 6px #00000021;
@@ -933,6 +933,10 @@ a {
   .home .home_info p {
     max-width: 100%;
     margin-bottom: 20px;
+  }
+
+  .portfolio .portfolio_item_inner .portfolio_img img {
+    min-height: 250px;
   }
 }
 
