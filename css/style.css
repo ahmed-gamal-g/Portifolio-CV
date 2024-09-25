@@ -342,7 +342,7 @@ a {
 
 .btn:hover {
   background-color: var(--skin-color);
-  color: var(--bg-black-100);
+  color: white;
   transform: scale(1.1);
 }
 
