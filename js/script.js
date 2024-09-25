@@ -22,70 +22,102 @@ const navv = document.querySelector(".navv"),
   totalSection = allSection.length;
 for (let i = 0; i < totalNavList; i++) {
   const a = navList[i].querySelector("a");
-    a.addEventListener("click", function () {
-        removeBackSection();
-      for (let j = 0; j < totalNavList; j++) {
-          if (navList[j].querySelector('a').classList.contains('active'))
-          {
-              addBackSection(j);
-            //   allSection[j].classList.add('back_section')
-          }
+  a.addEventListener("click", function () {
+    removeBackSection();
+    for (let j = 0; j < totalNavList; j++) {
+      if (navList[j].querySelector("a").classList.contains("active")) {
+        addBackSection(j);
+        //   allSection[j].classList.add('back_section')
+      }
       navList[j].querySelector("a").classList.remove("active");
     }
     this.classList.add("active");
-        showSection(this);
-        if (window.innerWidth < 1200) {
-            asideSectionTogglerBtn();
-        }
+    showSection(this);
+    if (window.innerWidth < 1200) {
+      asideSectionTogglerBtn();
+    }
   });
 }
 
 function removeBackSection() {
-    for (let i = 0; i < totalSection; i++){
-        allSection[i].classList.remove('back_section')
-    }
+  for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.remove("back_section");
+  }
 }
 
 function addBackSection(num) {
-    allSection[num].classList.add('back_section')
+  allSection[num].classList.add("back_section");
 }
 
 function showSection(element) {
-    for (let i = 0; i < totalSection; i++){
-        allSection[i].classList.remove('active')
-    }
+  for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.remove("active");
+  }
   const target = element.getAttribute("href").split("#")[1];
   document.querySelector("#" + target).classList.add("active");
 }
 
 function ubdateNave(element) {
-    for (let i = 0; i < totalNavList; i++){
-        navList[i].querySelector('a').classList.remove('active');
-        const target = element.getAttribute('href').split('#')[1];
-        if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) {
-           navList[i].querySelector('a').classList.add('active') 
-        }
+  for (let i = 0; i < totalNavList; i++) {
+    navList[i].querySelector("a").classList.remove("active");
+    const target = element.getAttribute("href").split("#")[1];
+    if (
+      target ===
+      navList[i].querySelector("a").getAttribute("href").split("#")[1]
+    ) {
+      navList[i].querySelector("a").classList.add("active");
     }
+  }
 }
 
-document.querySelector('.hire_me').addEventListener("click", function () {
-    const sectionIndex = this.getAttribute('data-section-index');
-    console.log(sectionIndex)
-    showSection(this);
-    ubdateNave(this);
-    removeBackSection();
-    addBackSection(sectionIndex)
-})
+document.querySelector(".hire_me").addEventListener("click", function () {
+  const sectionIndex = this.getAttribute("data-section-index");
+  console.log(sectionIndex);
+  showSection(this);
+  ubdateNave(this);
+  removeBackSection();
+  addBackSection(sectionIndex);
+});
 
-const navToglerBtn = document.querySelector('.navv_toggler'),
-    aside = document.querySelector('.aside');
+const navToglerBtn = document.querySelector(".navv_toggler"),
+  aside = document.querySelector(".aside");
 navToglerBtn.addEventListener("click", () => {
-        asideSectionTogglerBtn()
-})
+  asideSectionTogglerBtn();
+});
 function asideSectionTogglerBtn() {
-    aside.classList.toggle('open')
-    navToglerBtn.classList.toggle('open')
-    for (let i = 0; i < totalSection; i++){
-        allSection[i].classList.toggle('open')
-    }
+  aside.classList.toggle("open");
+  navToglerBtn.classList.toggle("open");
+  for (let i = 0; i < totalSection; i++) {
+    allSection[i].classList.toggle("open");
+  }
 }
+
+// start our-skills
+let ourSkills = document.getElementById("skills");
+let progressSkills = document.querySelectorAll(".progress .progress_in");
+let home = document.querySelector(".home-btn");
+let about = document.querySelector(".about");
+let portfolio = document.querySelector(".portfolio");
+let contact = document.querySelector(".contact");
+
+window.addEventListener("click", function (e) {
+  if (e.target === about) {
+    console.log("about clicked");
+    progressSkills.forEach((skill) => {
+      skill.style.width = skill.dataset.width;
+    });
+  } else if (e.target === home) {
+    progressSkills.forEach((skill) => {
+      skill.style.width = "0%";
+    });
+  } else if (e.target === portfolio) {
+    progressSkills.forEach((skill) => {
+      skill.style.width = "0%";
+    });
+  } else if (e.target === contact) {
+    progressSkills.forEach((skill) => {
+      skill.style.width = "0%";
+    });
+  }
+});
+// end our-skills
