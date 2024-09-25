@@ -303,7 +303,7 @@ a {
 
 @media(max-width:767px){
   .home .hello {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     font-size: 18px;
     font-weight: 700;
   }
@@ -349,7 +349,7 @@ a {
 .home .home_img img {
   height: 350px;
   border-radius: 5px;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .home .home_img {
@@ -360,7 +360,7 @@ a {
 .home .home_img::after {
   content: "";
   position: absolute;
-  right: -8px;
+  right: 10px;
   bottom: -40px;
   border-right: 10px solid var(--skin-color);
   border-bottom: 10px solid var(--skin-color);
@@ -954,7 +954,7 @@ a {
 
   .home .home_info p {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin: 15px 0 20px;
   }
 
   .portfolio .portfolio_item_inner .portfolio_img img {
