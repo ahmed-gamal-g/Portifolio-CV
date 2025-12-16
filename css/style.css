@@ -24,6 +24,27 @@ body.dark {
   box-sizing: border-box;
 }
 
+/* ========== Scrollbar (follows theme skin color) ========== */
+html {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--skin-color) var(--bg-black-100);
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-black-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--skin-color);
+  border-radius: 4px;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -4,17 +4,30 @@ styleSwitcherToggle.addEventListener("click", () => {
   document.querySelector(".style_switcher").classList.toggle("open");
 });
 
-// hide style - Switcher on scroll
-// let yarab = document.querySelector(".style_switcher")
-// window.onscroll = function () {
-//     if (this.scrollY >= 50) {
-//         yarab.style.display = 'none'
-//     }
-// }
+const styleSwitcher = document.querySelector(".style_switcher");
 
-window.addEventListener("scroll", () => {
-  if (document.querySelector(".style_switcher").classList.contains("open")) {
-    document.querySelector(".style_switcher").classList.remove("open");
+// hide style switcher on scroll
+// (close the panel if it is open)
+
+function closeStyleSwitcherOnScroll() {
+  if (styleSwitcher.classList.contains("open")) {
+    styleSwitcher.classList.remove("open");
+  }
+}
+
+// scroll of whole window
+window.addEventListener("scroll", closeStyleSwitcherOnScroll);
+// scroll inside any scrollable container (like .section)
+document.addEventListener("scroll", closeStyleSwitcherOnScroll, true);
+
+// hide style switcher when clicking anywhere outside it
+document.addEventListener("click", (e) => {
+  const clickedInsideSwitcher = styleSwitcher.contains(e.target);
+  const clickedOnToggle = styleSwitcherToggle.contains(e.target);
+
+  // if panel is open and click is outside both the box and the gear icon -> close it
+  if (styleSwitcher.classList.contains("open") && !clickedInsideSwitcher && !clickedOnToggle) {
+    styleSwitcher.classList.remove("open");
   }
 });
 
