@@ -121,3 +121,18 @@ window.addEventListener("click", function (e) {
   }
 });
 // end our-skills
+
+// =================== CV Download Handler ======================
+// document.addEventListener('DOMContentLoaded', function() {
+//   const downloadCvBtn = document.getElementById('downloadCvBtn');
+//   if (downloadCvBtn) {
+//     downloadCvBtn.addEventListener('click', function(e) {
+//       // Try to force download - if the browser doesn't support download attribute
+//       // This ensures the file downloads instead of opening
+//       const fileName = this.getAttribute('download');
+//       if (!fileName) {
+//         this.setAttribute('download', 'Ahmed-Gamal-CV.pdf');
+//       }
+//     });
+//   }
+// });
